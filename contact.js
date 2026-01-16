@@ -1,7 +1,7 @@
 (function() {
     // Inicialización de EmailJS con la Public Key corregida para 2026
     emailjs.init({
-      publicKey: "5kh44NHbLLCFw7gb6",
+      publicKey: "_Jy6JBLD2LiXcRE27",
     });
 })();
 
