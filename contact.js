@@ -1,10 +1,15 @@
+(function() {
+    // Inicialización de EmailJS con la Public Key corregida para 2026
+    emailjs.init({
+      publicKey: "5kh44NHbLLCFw7gb6",
+    });
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
-
-    emailjs.init("5kh44NHbLLCFw7gb6");
-
-    const form = document.querySelector("form");
+    const form = document.getElementById("contact-form");
 
     form.addEventListener("submit", function (event) {
+        // MUY IMPORTANTE: Previene el envío por defecto que causa el Error 405
         event.preventDefault();
 
         const nombre = document.getElementById("nombre").value.trim();
@@ -13,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const empresa = document.getElementById("empresa").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        if (!nombre || !telefono || !email || !empresa || !mensaje) {
-            alert("Por favor, complete todos los campos.");
+        // Validación básica
+        if (!nombre || !telefono || !email || !mensaje) {
+            alert("Por favor, complete todos los campos obligatorios.");
             return;
         }
 
@@ -24,24 +30,33 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        
+        // Parámetros para la plantilla de EmailJS
         const parametrosPlantilla = {
             nombre: nombre,
             telefono: telefono,
             email: email,
-            empresa: empresa,
+            empresa: empresa || "No especificada",
             mensaje: mensaje,
             reply_to: email 
         };
 
-         emailjs.send("service_8ejqh6h", "template_6erphz6", parametrosPlantilla)
+        // Cambiar el texto del botón para feedback visual
+        const btn = form.querySelector('input[type="submit"]');
+        btn.value = 'Enviando...';
+        btn.disabled = true;
+
+        emailjs.send("service_8ejqh6h", "template_6erphz6", parametrosPlantilla)
             .then(function(response) {
                 alert("¡Mensaje enviado con éxito a Keytron!");
                 form.reset();
             })
             .catch(function(error) {
-                console.error("Error:", error);
-                alert("Error al enviar: " + error.text);
+                console.error("Error detallado de EmailJS:", error);
+                alert("Error al enviar el formulario. Por favor, inténtelo de nuevo más tarde.");
+            })
+            .finally(function() {
+                btn.value = 'enviar';
+                btn.disabled = false;
             });
     });
 });
