@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.value = 'Enviando...';
         btn.disabled = true;
 
-        emailjs.send("service_8ejqh6h", "template_6erphz6", parametrosPlantilla)
+        emailjs.send("service_x52lah9", "template_6erphz6", parametrosPlantilla)
             .then(function(response) {
                 alert("¡Mensaje enviado con éxito a Keytron!");
                 form.reset();
