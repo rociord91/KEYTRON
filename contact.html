@@ -1,98 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Keytron ofrece soluciones avanzadas en ciberseguridad, infraestructuras IT y servicios tecnológicos a medida.">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://www.keytron.com/">
-            <title>Contacto | Keytron</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    </head>
-    <body>
-        <nav class="menu">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Keytron">
-            </a>
-            <div class="linksmenu">
-                <a href="index.html">Inicio</a>
-                <a href="aboutus.html">Sobre Nosotros</a>
-                <a href="projects.html">Proyectos</a>
-                <a href="certificaciones.html">Certificaciones</a>
-                <a href="alianzas.html">Alianzas</a>
-                <a href="contact.html">Contacto</a>
-            </div>
-        </nav>
-
-        <br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keytron ofrece soluciones avanzadas en ciberseguridad, infraestructuras IT y servicios tecnológicos a medida.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.keytron.com">
+    <title>Contacto | Keytron</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     
-        <section class="cuadroformulario">
-            <div class="formulario"> <!--bloque de formulario-->
-                <form method="post">
-                    <h1>Contáctenos</h1>
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" required> <br>
+    <!-- CARGA DE EMAILJS (CORREGIDA) -->
+    <script src="https://cdn.jsdelivr.net"></script>
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Keytron">
+        </a>
+        <div class="linksmenu">
+            <a href="index.html">Inicio</a>
+            <a href="aboutus.html">Sobre Nosotros</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="certificaciones.html">Certificaciones</a>
+            <a href="alianzas.html">Alianzas</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+    </nav>
 
-                    <label for="telefono">Número de teléfono:</label><br>
-                    <input type="tel" id="telefono" name="telefono" required><br>
+    <br><br>
 
-                    <label for="email">Correo Electrónico:</label><br>
-                    <input type="email" id="email" name="email" required><br>
+    <section class="cuadroformulario">
+        <div class="formulario">
+            <!-- Quitamos el method="post" para evitar envíos accidentales al servidor si falla el JS -->
+            <form id="contact-form">
+                <h1>Contáctenos</h1>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required> <br>
 
-                    <label for="empresa">Empresa:</label><br>
-                    <input type="text" id="empresa" name="empresa"><br>
-                    
-                    <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
-                    
-                    <input type="submit" value="Enviar">
-                </form>
-                <script src="https://cdn.jsdelivr.net"></script>
-            </div>
+                <label for="telefono">Número de teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br>
 
-            <div class="datoscontacto"> <!--bloque de datos de contacto keytron-->
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="empresa">Empresa:</label><br>
+                <input type="text" id="empresa" name="empresa"><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+                
+                <input type="submit" value="enviar">
+            </form>
+        </div>
+
+        <div class="datoscontacto">
             <h1><b>Keytron</b></h1>
-            <a href="https://share.google/ozMCVoeUHppHgUH1z" target="_blank"><img src="img/mapakeytron.png" alt="Imagen con enlace para acceder a la ubicación" class="mapa" id="mapa"></a>
+            <a href="https://share.google" target="_blank">
+                <img src="img/mapakeytron.png" alt="Ubicación Keytron" class="mapa" id="mapa">
+            </a>
             <ul>
                 <li>C/ Guzmán el Bueno 16, Edificio Digiespace.<br>28108 Alcobendas, Madrid, España.</li>
                 <li>+34 91 662 61 71</li>
                 <li><a href="mailto:comunicaciones@keytron.com">comunicaciones@keytron.com</a></li>
             </ul>
+        </div>
+    </section>
+
+    <footer class="sticky-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logokeytron.png" alt="Logotipo de Keytron" class="logo-peque">
             </div>
-
-        </section>
-
-        <footer class="sticky-footer">
-    <div class="footer-container">
-        <!-- LOGO -->
-        <div class="footer-logo">
-            <img src="img/logokeytron.png" alt="Logotipo de Keytron" class="logo-peque">
+            <nav class="footer-links" aria-label="Enlaces legales">
+                <a href="avisolegal.html">Aviso Legal</a> |
+                <a href="politica-privacidad.html">Política de Privacidad</a> |
+                <a href="certificaciones.html">Certificaciones</a> |
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <p class="footer-copy">
+                © 1988 – 2026 - <a href="https://www.keytron.com">Keytron.com</a> – Todos los derechos reservados.
+            </p>
+            <div id="navtop">
+                <a href="mailto:comunicaciones@keytron.com">comunicaciones@keytron.com</a>
+                <a href="https://www.linkedin.com">
+                    <img src="img/linkedin.png" alt="LinkedIn" id="linkedin">
+                </a>
+                <a href="tel:916626171">+34 91 662 61 71</a>
+            </div>
         </div>
+    </footer>
 
-        <!-- ENLACES LEGALES -->
-        <nav class="footer-links" aria-label="Enlaces legales">
-            <a href="avisolegal.html">Aviso Legal</a> |
-            <a href="politica-privacidad.html">Política de Privacidad</a> |
-            <a href="certificaciones.html">Certificaciones</a> |
-            <a href="contact.html">Contacto</a>
-        </nav>
-
-        <!-- COPYRIGHT -->
-        <p class="footer-copy">
-            © 1988 – 2026 - <a href="https://www.keytron.com">Keytron.com</a> – Todos los derechos reservados.
-        </p>
-
-        <!-- CONTACTO / NAVTOP -->
-        <div id="navtop">
-            <a href="mailto:comunicaciones@keytron.com">comunicaciones@keytron.com</a>
-            <a href="https://www.linkedin.com/company/keytron-com/">
-                <img src="img/linkedin.png" alt="Icono de LinkedIn" id="linkedin">
-            </a>
-            <a href="tel:916626171">+34 91 662 61 71</a>
-        </div>
-    </div>
-</footer>
-
-        <script src="contact.js"></script>
-    </body>
+    <!-- Cargamos nuestro script al final -->
+    <script src="contact.js"></script>
+</body>
 </html>
