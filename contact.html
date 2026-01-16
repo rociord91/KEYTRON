@@ -31,26 +31,24 @@
 
     <section class="cuadroformulario">
         <div class="formulario">
-            <!-- Quitamos el method="post" para evitar envíos accidentales al servidor si falla el JS -->
-            <form id="contact-form">
-                <h1>Contáctenos</h1>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required> <br>
+<form id="contact-form" action="https://formsubmit.co/rocio.rr.1991@gmail.com" method="POST"> 
+    <h1>Contáctenos</h1> 
+    <label for="nombre">Nombre:</label><br> 
+    <input type="text" id="nombre" name="nombre" required><br> 
+    <label for="telefono">Número de teléfono:</label><br> 
+    <input type="tel" id="telefono" name="telefono" required><br> 
+    <label for="email">Correo Electrónico:</label><br> 
+    <input type="email" id="email" name="email" required><br> 
+    <label for="empresa">Empresa:</label><br> 
+    <input type="text" id="empresa" name="empresa"><br> 
+    <label for="mensaje">Mensaje:</label><br> 
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br> 
 
-                <label for="telefono">Número de teléfono:</label><br>
-                <input type="tel" id="telefono" name="telefono" required><br>
-
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br>
-
-                <label for="empresa">Empresa:</label><br>
-                <input type="text" id="empresa" name="empresa"><br>
-                
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
-                
-                <input type="submit" value="enviar">
-            </form>
+    <input type="hidden" name="_captcha" value="false"> 
+    <input type="hidden" name="_template" value="table"> 
+    <input type="hidden" name="_next" value="https://rociord91.github.io/KEYTRON/contact.html"> 
+    <input type="submit" value="Enviar"> 
+</form>
         </div>
 
         <div class="datoscontacto">
@@ -90,6 +88,6 @@
         </div>
     </footer>
 
-    <script src="contact.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>
